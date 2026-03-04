@@ -25,15 +25,6 @@ while True:
             title = input('Task title:')
             description = input('Task description:')
             priority= priority_validation()
-            """while True:
-                try:
-                    priority =int(input('Task priority between 0 and 5:\n'))
-                    if priority < 0 or priority > 5:
-                        print("invalid priority Choose a number between 0 and 5 \n")
-                    else:
-                        break
-                except ValueError:
-                    print("invalid priority\n")"""
             add_task(title,description,priority)
         case 2:
             get_tasks()
