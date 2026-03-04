@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "task_number": 1,
+        "title": "first task",
+        "description": "to do list task",
+        "priority": 3,
+        "status": false
+    }
+]

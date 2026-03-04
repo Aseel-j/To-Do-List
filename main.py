@@ -1,4 +1,5 @@
-from modules import add_task, get_tasks, sort_tasks, update_status, update_priority, delete_task, save_tasks
+from modules import add_task, get_tasks, sort_tasks, update_status, update_priority, delete_task, save_tasks, \
+    priority_validation
 
 while True:
     print('1. Add Task\n',
@@ -23,15 +24,16 @@ while True:
         case 1:
             title = input('Task title:')
             description = input('Task description:')
-            while True:
+            priority= priority_validation()
+            """while True:
                 try:
-                    priority =int(input('Task priority between 0 and 5:'))
+                    priority =int(input('Task priority between 0 and 5:\n'))
                     if priority < 0 or priority > 5:
                         print("invalid priority Choose a number between 0 and 5 \n")
                     else:
                         break
                 except ValueError:
-                    print("invalid priority\n")
+                    print("invalid priority\n")"""
             add_task(title,description,priority)
         case 2:
             get_tasks()
