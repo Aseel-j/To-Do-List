@@ -1,5 +1,8 @@
-from modules import add_task, get_tasks, sort_tasks, update_status, update_priority, delete_task, save_tasks, \
-    priority_validation
+from modules import TaskManager
+from validation import input_and_validate_priority
+
+manager = TaskManager()
+manager.load_tasks()
 
 while True:
     print('1. Add Task\n',
@@ -24,19 +27,19 @@ while True:
         case 1:
             title = input('Task title:')
             description = input('Task description:')
-            priority= priority_validation()
-            add_task(title,description,priority)
+            priority= input_and_validate_priority()
+            manager.add_task(title,description,priority)
         case 2:
-            get_tasks()
+            manager.print_tasks()
         case 3:
-            sort_tasks()
+            manager.sort_tasks()
         case 4:
-            update_status()
+            manager.update_status()
         case 5:
-            update_priority()
+            manager.update_priority()
         case 6:
-            delete_task()
+            manager.delete_task()
         case 7:
             exit()
         case 8:
-            save_tasks()
+            manager.save_tasks()
