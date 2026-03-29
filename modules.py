@@ -79,7 +79,12 @@ class TaskManager:
     def sort_tasks(self):
         sorted_tasks = sorted(self.tasks, key=lambda t: t.priority)
         for task in sorted_tasks:
-            print(f"{task.title} - Priority: {task.priority}")
+            print(f"Task_number: {task.task_number}")
+            print(f"Title: {task.title}")
+            print(f"Description: {task.description}")
+            print(f"Priority: {task.priority}")
+            print(f"Status: {'Done' if task.status else 'Not Done'}")
+            print("-------------------------")
 
     # Update status
     def update_status(self):

@@ -3,7 +3,21 @@
         "task_number": 1,
         "title": "first task",
         "description": "to do list task",
-        "priority": 3,
+        "priority": 1,
         "status": true
+    },
+    {
+        "task_number": 2,
+        "title": "hdbvhgdv",
+        "description": "djivhydg",
+        "priority": 1,
+        "status": false
+    },
+    {
+        "task_number": 3,
+        "title": "jifhyub",
+        "description": "djfhbydgfv'",
+        "priority": 0,
+        "status": false
     }
 ]
